@@ -31,7 +31,10 @@ describe('Assign tag', () => {
     cy.get('#__xmlview2--button-assign-tags').click({force: true})
     cy.get('#__input0-table-change-messages-0-inner').type('Automate',{force: true})
     cy.get('#__input0-table-change-messages-1-inner').type('Automate',{force: true})
+    cy.get('#__input0-table-change-messages-0-inner').clear({force: true})
+    cy.get('#__input0-table-change-messages-0-inner').type('Automate',{force: true})
+    cy.wait(2000)
     cy.get('#__button4-inner').click({force: true})
-
+    cy.wait(5000)
   })
 })
